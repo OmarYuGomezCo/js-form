@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica de encripción de contraseña</title>
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
+      integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="main__login-container">
+        <div class="main__login-allowed">
+          <i class="far fa-address-card"></i>
+        </div>
+        <h2 class="main__login-brand">
+          <span class="fas fa-graduation-cap" />
+          Utch
+        </h2>
+        <h1 class="main__login-title">Iniciar sesión</h1>
+        <form>
+          <label for="username" class="main__form-label">
+            Nombre de usuario
+          </label>
+          <div class="main__input-container">
+            <i class="far fa-user"></i>
+            <input type="text" id="username" class="main__form-input" />
+          </div>
+          <label for="username" class="main__form-label"> Contraseña </label>
+          <div class="main__input-container">
+            <i class="far fa-dot-circle"></i>
+            <input type="password" id="pass" class="main__form-input" />
+          </div>
+
+          <div class="main__submit-container">
+            <div class="main__form-submit--animation" id="hiddenbutton">
+              <i class="fas fa-check"></i>
+            </div>
+            <button type="submit" class="main__form-submit" id="send-button">
+              enviar
+            </button>
+          </div>
+        </form>
+        <div class="main__encrypted-msg-container" id="passwordDump"></div>
+      </div>
+    </main>
+  </body>
+</html>
+<script src="script.js"></script>

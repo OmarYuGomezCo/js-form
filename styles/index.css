@@ -1,0 +1,220 @@
+body {
+  background-color: var(--Bg-light);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.main__login-container {
+  position: relative;
+
+  padding: 30px;
+  margin: 30px 0;
+  min-height: 380px;
+  min-width: 380px;
+
+  background-color: var(--JustWhite);
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px -10px 29px 0px;
+}
+
+.main__login-container::before {
+  position: absolute;
+  left: 15px;
+  bottom: -15px;
+  z-index: -1;
+
+  min-width: 350px;
+  height: 30px;
+
+  background-color: var(--LightGray);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  content: "";
+}
+
+.main__login-allowed {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--RoyalBlue);
+  border-radius: 25px;
+  box-shadow: rgba(109, 109, 131, 0.3) 0px 0px 12px 0px;
+
+  transition: background 0.3s ease-in-out;
+}
+
+.main__login-allowed:hover {
+  background: var(--LighterBlue);
+  cursor: pointer;
+}
+
+.main__login-allowed i {
+  font-size: 4rem;
+  color: var(--JustWhite);
+}
+
+.main__login-brand {
+  font-size: 1.8rem;
+  color: var(--RoyalBlue);
+
+  text-transform: lowercase;
+}
+
+.main__login-title {
+  margin: 10px 0;
+
+  font-size: 2.2rem;
+  color: var(--DeepBlue);
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+
+.main__form-label {
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: var(--Label);
+}
+
+.main__input-container {
+  position: relative;
+
+  margin: 5px 0 10px;
+}
+.main__form-input {
+  padding: 10px 35px 10px 10px;
+
+  width: 100%;
+
+  outline: none;
+  border: 1px solid var(--Kimberly);
+  border-radius: 5px;
+  color: var(--Label);
+}
+
+.main__form-input:focus {
+  border-color: var(--RoyalBlue);
+}
+
+.main__input-container i {
+  position: absolute;
+  right: 0;
+
+  padding: 10px;
+
+  font-size: 1.6rem;
+  color: var(--Kimberly);
+}
+
+.main__form-submit {
+  padding: 15px;
+  width: 100%;
+
+  font-size: 1.4rem;
+  color: var(--JustWhite);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background-color: var(--DeepBlue);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main__form-submit:hover {
+  background-color: var(--LighterBlue);
+}
+
+.main__submit-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.main__form-submit--animation {
+  position: absolute;
+  z-index: 1;
+
+  width: 20%;
+  padding: 12px;
+
+  font-size: 1.8rem;
+  color: var(--JustWhite);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+
+  background-color: var(--RoyalBlue);
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out, border-radius 0.6s ease-in-out,
+    width 0.5s ease-in-out;
+}
+.main__form-submit--animation.showValid,
+.main__form-submit--animation.showInvalid {
+  border-radius: 8px;
+  opacity: 1;
+  visibility: visible;
+
+  width: 100%;
+}
+
+.main__form-submit--animation.showInvalid {
+  background-color: var(--Error);
+}
+
+.main__form-submit--animation.showValid i,
+.main__form-submit--animation.showInvalid i {
+  transform: rotate(0deg);
+}
+
+.main__form-submit--animation i {
+  transition: transform 0.4s ease-in-out;
+  transform: rotate(-90deg);
+}
+
+.main__encrypted-msg-container {
+  margin: 15px 0 10px;
+  padding: 0 5px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--Kimberly);
+}
+
+.main__encrypted-msg-container p::before {
+  content: "Contraseña: ";
+}
